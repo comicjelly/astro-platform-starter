@@ -1,1 +1,26 @@
+<form name="booking" method="POST" data-netlify="true" action="/success" class="space-y-4 bg-white p-6 rounded-lg shadow-md">
+  <input type="hidden" name="form-name" value="booking" />
+  
+  <div>
+    <label class="block text-sm font-medium">Your Name</label>
+    <input type="text" name="name" required class="w-full border p-2 rounded" placeholder="John Doe" />
+  </div>
 
+  <div>
+    <label class="block text-sm font-medium">Interest</label>
+    <select name="interest" class="w-full border p-2 rounded">
+      <option value="tour">Tour Package (Safaris)</option>
+      <option value="car-hire">Car Hire / Transport</option>
+      <option value="custom">Custom Trip Inquiry</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium">Message / Details</label>
+    <textarea name="message" required class="w-full border p-2 rounded" rows="4" placeholder="Tell Danny about your trip dates or car needs..."></textarea>
+  </div>
+
+  <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">
+    Send Request to Danny
+  </button>
+</form>
