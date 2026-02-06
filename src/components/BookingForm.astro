@@ -1,26 +1,54 @@
-<form name="booking" method="POST" data-netlify="true" action="/success" class="space-y-4 bg-white p-6 rounded-lg shadow-md">
-  <input type="hidden" name="form-name" value="booking" />
-  
-  <div>
-    <label class="block text-sm font-medium">Your Name</label>
-    <input type="text" name="name" required class="w-full border p-2 rounded" placeholder="John Doe" />
-  </div>
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-  <div>
-    <label class="block text-sm font-medium">Interest</label>
-    <select name="interest" class="w-full border p-2 rounded">
-      <option value="tour">Tour Package (Safaris)</option>
-      <option value="car-hire">Car Hire / Transport</option>
-      <option value="custom">Custom Trip Inquiry</option>
-    </select>
-  </div>
+<Layout>
 
-  <div>
-    <label class="block text-sm font-medium">Message / Details</label>
-    <textarea name="message" required class="w-full border p-2 rounded" rows="4" placeholder="Tell Danny about your trip dates or car needs..."></textarea>
-  </div>
+  <!-- Paste your custom <style> block here (or move to Layout or external file) -->
+  <style is:global>
+    :root {
+      --primary: #ff9800;
+      --primary-dark: #e68900;
+      --secondary: #2e7d32;
+      --light: #f8f9fa;
+      --dark: #333;
+    }
 
-  <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">
-    Send Request to Danny
-  </button>
-</form>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('/logo2.png');   /* ← changed from ../../logo2.png */
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 40%;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    /* ... paste ALL your other custom CSS rules here ... */
+    /* including .hero, .section-title, .tour-card, .glass-navbar, etc. */
+  </style>
+
+  <header id="home" class="hero reveal">
+    <div class="container text-center">
+      <h1 class="display-2 fw-bold mb-4">The Full Experience</h1>
+      <p class="lead mb-4 fw-medium text-white-50">Enjoy the Best Tour and Travel — Gorilla Tracking, Boat Cruises, & Safaris</p>
+      <a href="#inquiry" class="btn btn-primary btn-lg px-5 py-3 fw-bold shadow text-center">Plan My Trip</a>
+    </div>
+  </header>
+
+  <!-- Paste the rest of your sections: #about, #tours, #car-hire, #trust, testimonials, #inquiry -->
+
+  <!-- They remain almost 100% identical HTML -->
+
+</Layout>
